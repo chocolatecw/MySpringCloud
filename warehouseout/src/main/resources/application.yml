@@ -1,0 +1,34 @@
+server:
+  port: 8763
+
+spring:
+  application:
+    name: warehouseout
+  security:
+    user:
+      name: zhangsan
+      password: abc123
+
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://root:abc123@localhost:8761/eureka/
+
+
+
+security:
+  oauth2:
+    resource:
+      jwt:
+        key-value: test-secret
+
+
+
+
+
+
+
+
+
+

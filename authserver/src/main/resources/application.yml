@@ -1,0 +1,15 @@
+server:
+  port: 8762
+
+spring:
+  application:
+    name: authserver
+#  security:
+#    user:
+#      name: zhangsan
+#      password: abc123
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://root:abc123@localhost:8761/eureka/

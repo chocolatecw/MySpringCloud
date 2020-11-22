@@ -1,0 +1,37 @@
+server:
+  port: 8765
+
+spring:
+  application:
+    name: service-zuul
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://root:abc123@localhost:8761/eureka/
+
+zuul:
+  routes:
+#    api-eureka:
+#      path: /zuul-eureka/**
+#      serviceId: eurka-server
+    api-auth:
+      path: /zuul-auth/**
+      serviceId: authserver
+    api-enter:
+      path: /zuul-enter/**
+      serviceId: warehouseenter
+    api-out:
+      path: /zuul-out/**
+      serviceId: warehouseout
+
+
+
+
+
+
+
+
+
+
+
