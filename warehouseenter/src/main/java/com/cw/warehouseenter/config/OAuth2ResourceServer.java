@@ -13,6 +13,7 @@ public class OAuth2ResourceServer extends ResourceServerConfigurerAdapter {
     public void configure(HttpSecurity http) throws Exception {
         http
             .authorizeRequests()
+            .antMatchers("/actuator").permitAll()
             .anyRequest().authenticated().and()
             .requestMatchers().antMatchers("/api/**");
 
